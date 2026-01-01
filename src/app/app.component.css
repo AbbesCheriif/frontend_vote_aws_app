@@ -41,9 +41,9 @@ body {
 .header {
   text-align: center;
   padding: 40px 20px;
-  background: var(--gradient);
+  background: rgba(255, 255, 255, 0.95);
   border-radius: 20px;
-  color: white;
+  color: var(--text-primary);
   margin-bottom: 30px;
   box-shadow: var(--shadow);
 }
@@ -52,13 +52,16 @@ body {
   font-size: 3rem;
   margin-bottom: 10px;
   font-weight: 700;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .subtitle {
   font-size: 1.2rem;
-  opacity: 0.95;
-  font-weight: 300;
+  color: var(--text-secondary);
+  font-weight: 400;
 }
 
 /* Navigation */
@@ -97,6 +100,7 @@ body {
 .content {
   flex: 1;
   animation: fadeIn 0.5s ease;
+  margin-bottom: 40px;
 }
 
 @keyframes fadeIn {
@@ -114,8 +118,9 @@ body {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 40px;
-  color: var(--text-primary);
+  color: white;
   font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* Projects Grid */
@@ -312,7 +317,7 @@ body {
 
 .result-bar-container {
   height: 12px;
-  background: var(--background);
+  background: rgba(102, 126, 234, 0.2);
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 10px;
@@ -378,15 +383,6 @@ body {
 .cta-btn:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-hover);
-}
-
-/* Footer */
-.footer {
-  text-align: center;
-  padding: 30px 20px;
-  margin-top: 60px;
-  color: var(--text-secondary);
-  font-size: 0.9rem;
 }
 
 /* Responsive */
