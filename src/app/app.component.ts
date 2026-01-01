@@ -14,12 +14,12 @@ export class AppComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
-    this.http.get('http://10.100.11.233:5000/projects')
+    this.http.get('/api/projects')
       .subscribe((data: any) => this.projects = data);
   }
 
   vote(projectId: number) {
-    this.http.post('http://VOTING-GATEWAY-IP:5000/vote', {
+    this.http.post('/api/vote', {
       project_id: projectId
     }).subscribe(() => alert('Vote enregistré'));
   }
