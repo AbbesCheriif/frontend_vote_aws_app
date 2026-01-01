@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 
@@ -7,7 +7,8 @@ import { CommonModule } from '@angular/common';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   imports: [CommonModule],
-  standalone: true
+  standalone: true,
+  encapsulation: ViewEncapsulation.None
 })
 export class AppComponent implements OnInit {
   projects: any[] = [];
