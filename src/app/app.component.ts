@@ -12,8 +12,11 @@ export class AppComponent implements OnInit {
   projects: any[] = [];
 
   constructor(private http: HttpClient) {}
-
+  loaded = false;
   ngOnInit() {
+    console.log("ngOnInit appelé");
+    if (this.loaded) return;
+    this.loaded = true;
     this.http.get('/api/projects')
       .subscribe((data: any) => this.projects = data);
   }
