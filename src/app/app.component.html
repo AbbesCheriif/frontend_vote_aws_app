@@ -62,17 +62,17 @@
     </div>
 
     <div class="results-list">
-      @for (result of results; track result.project_id; let i = $index) {
-        <div class="result-card" [class.winner]="i === 0">
+      @for (result of results; track result.project_id; let idx = $index) {
+        <div class="result-card" [class.winner]="idx === 0">
           <div class="result-rank">
-            @if (i === 0) {
+            @if (idx === 0) {
               <span class="trophy">🏆</span>
-            } @else if (i === 1) {
+            } @else if (idx === 1) {
               <span class="medal">🥈</span>
-            } @else if (i === 2) {
+            } @else if (idx === 2) {
               <span class="medal">🥉</span>
             } @else {
-              <span class="rank-number">{{ i + 1 }}</span>
+              <span class="rank-number">{{ idx + 1 }}</span>
             }
           </div>
           
@@ -82,7 +82,7 @@
               <div 
                 class="result-bar" 
                 [style.width.%]="getPercentage(result.votes)"
-                [class.leader]="i === 0">
+                [class.leader]="idx === 0">
               </div>
             </div>
             <div class="result-stats">
@@ -103,8 +103,4 @@
       </div>
     }
   </div>
-
-  <footer class="footer">
-    <p>Propulsé par AWS EC2 • VPC Architecture</p>
-  </footer>
 </div>

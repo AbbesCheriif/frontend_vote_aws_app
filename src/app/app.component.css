@@ -4,7 +4,7 @@
   --primary-dark: #e88b00;
   --secondary-color: #232f3e;
   --success-color: #4caf50;
-  --background: #f5f7fa;
+  --background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   --card-bg: #ffffff;
   --text-primary: #232f3e;
   --text-secondary: #6c757d;
