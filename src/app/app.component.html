@@ -1,7 +1,7 @@
 <div class="container">
   <header class="header">
     <h1>☁️ CloudVote</h1>
-    <p class="subtitle">Votez pour votre projet cloud préféré</p>
+    <p class="subtitle">Votez pour votre Fournisseur cloud préféré</p>
   </header>
 
   <nav class="navigation">
@@ -21,7 +21,7 @@
 
   <!-- Page de vote -->
   <div class="content" *ngIf="currentView === 'vote'">
-    <h2 class="section-title">Choisissez votre projet favori</h2>
+    <h2 class="section-title">Choisissez votre fournisseur favori</h2>
     
     <div class="projects-grid">
       @for (p of projects; track p.id) {
@@ -41,7 +41,7 @@
 
     @if (projects.length === 0) {
       <div class="empty-state">
-        <p>Aucun projet disponible pour le moment.</p>
+        <p>Aucun fournisseur disponible pour le moment.</p>
       </div>
     }
   </div>
@@ -57,7 +57,7 @@
       </div>
       <div class="stat-card">
         <div class="stat-value">{{ results.length }}</div>
-        <div class="stat-label">Projets</div>
+        <div class="stat-label">FOURNISSEURS</div>
       </div>
     </div>
 
